@@ -18,7 +18,7 @@
         <item>Connection Builder</item>
         <item>Receipt</item>
         <item>Multichannel</item>
-        </string-array>
+    </string-array>
     <string-array name="DISCODEMO_DISCO_METHODS">
         <item>Bluetooth</item>
         <item>Local Broadcast</item>

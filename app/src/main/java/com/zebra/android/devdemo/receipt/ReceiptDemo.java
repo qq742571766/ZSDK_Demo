@@ -1,14 +1,14 @@
 /***********************************************
  * CONFIDENTIAL AND PROPRIETARY 
- * 
+ *
  * The source code and other information contained herein is the confidential and the exclusive property of
  * ZIH Corp. and is subject to the terms and conditions in your end user license agreement.
  * This source code, and any other information contained herein, shall not be copied, reproduced, published, 
  * displayed or distributed, in whole or in part, in any medium, by any means, for any purpose except as
  * expressly permitted under such license agreement.
- * 
+ *
  * Copyright ZIH Corp. 2012
- * 
+ *
  * ALL RIGHTS RESERVED
  ***********************************************/
 
@@ -166,8 +166,8 @@ public class ReceiptDemo extends ConnectionScreen {
     }
 
     private Map<String, String> createListOfItems() {
-        String[] names = { "Microwave Oven", "Sneakers (Size 7)", "XL T-Shirt", "Socks (3-pack)", "Blender", "DVD Movie" };
-        String[] prices = { "79.99", "69.99", "39.99", "12.99", "34.99", "16.99" };
+        String[] names = {"Microwave Oven", "Sneakers (Size 7)", "XL T-Shirt", "Socks (3-pack)", "Blender", "DVD Movie"};
+        String[] prices = {"79.99", "69.99", "39.99", "12.99", "34.99", "16.99"};
         Map<String, String> retVal = new HashMap<String, String>();
 
         for (int ix = 0; ix < names.length; ix++) {
@@ -209,27 +209,27 @@ public class ReceiptDemo extends ConnectionScreen {
          ^XZ indicates the end of a label
          */
 
-        "^XA" +
+                "^XA" +
 
-        "^PON^PW400^MNN^LL%d^LH0,0" + "\r\n" +
+                        "^PON^PW400^MNN^LL%d^LH0,0" + "\r\n" +
 
-        "^FO50,50" + "\r\n" + "^A0,N,70,70" + "\r\n" + "^FD Shipping^FS" + "\r\n" +
+                        "^FO50,50" + "\r\n" + "^A0,N,70,70" + "\r\n" + "^FD Shipping^FS" + "\r\n" +
 
-        "^FO50,130" + "\r\n" + "^A0,N,35,35" + "\r\n" + "^FDPurchase Confirmation^FS" + "\r\n" +
+                        "^FO50,130" + "\r\n" + "^A0,N,35,35" + "\r\n" + "^FDPurchase Confirmation^FS" + "\r\n" +
 
-        "^FO50,180" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDCustomer:^FS" + "\r\n" +
+                        "^FO50,180" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDCustomer:^FS" + "\r\n" +
 
-        "^FO225,180" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDAcme Industries^FS" + "\r\n" +
+                        "^FO225,180" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDAcme Industries^FS" + "\r\n" +
 
-        "^FO50,220" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDDelivery Date:^FS" + "\r\n" +
+                        "^FO50,220" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDDelivery Date:^FS" + "\r\n" +
 
-        "^FO225,220" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FD%s^FS" + "\r\n" +
+                        "^FO225,220" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FD%s^FS" + "\r\n" +
 
-        "^FO50,273" + "\r\n" + "^A0,N,30,30" + "\r\n" + "^FDItem^FS" + "\r\n" +
+                        "^FO50,273" + "\r\n" + "^A0,N,30,30" + "\r\n" + "^FDItem^FS" + "\r\n" +
 
-        "^FO280,273" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDPrice^FS" + "\r\n" +
+                        "^FO280,273" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDPrice^FS" + "\r\n" +
 
-        "^FO50,300" + "\r\n" + "^GB350,5,5,B,0^FS";
+                        "^FO50,300" + "\r\n" + "^GB350,5,5,B,0^FS";
 
         int headerHeight = 325;
         String body = String.format("^LH0,%d", headerHeight);
@@ -257,21 +257,21 @@ public class ReceiptDemo extends ConnectionScreen {
 
         String footer = String.format("^LH0,%d" + "\r\n" +
 
-        "^FO50,1" + "\r\n" + "^GB350,5,5,B,0^FS" + "\r\n" +
+                "^FO50,1" + "\r\n" + "^GB350,5,5,B,0^FS" + "\r\n" +
 
-        "^FO50,15" + "\r\n" + "^A0,N,40,40" + "\r\n" + "^FDTotal^FS" + "\r\n" +
+                "^FO50,15" + "\r\n" + "^A0,N,40,40" + "\r\n" + "^FDTotal^FS" + "\r\n" +
 
-        "^FO175,15" + "\r\n" + "^A0,N,40,40" + "\r\n" + "^FD$%.2f^FS" + "\r\n" +
+                "^FO175,15" + "\r\n" + "^A0,N,40,40" + "\r\n" + "^FD$%.2f^FS" + "\r\n" +
 
-        "^FO50,130" + "\r\n" + "^A0,N,45,45" + "\r\n" + "^FDPlease Sign Below^FS" + "\r\n" +
+                "^FO50,130" + "\r\n" + "^A0,N,45,45" + "\r\n" + "^FDPlease Sign Below^FS" + "\r\n" +
 
-        "^FO50,190" + "\r\n" + "^GB350,200,2,B^FS" + "\r\n" +
+                "^FO50,190" + "\r\n" + "^GB350,200,2,B^FS" + "\r\n" +
 
-        "^FO50,400" + "\r\n" + "^GB350,5,5,B,0^FS" + "\r\n" +
+                "^FO50,400" + "\r\n" + "^GB350,5,5,B,0^FS" + "\r\n" +
 
-        "^FO50,420" + "\r\n" + "^A0,N,30,30" + "\r\n" + "^FDThanks for choosing us!^FS" + "\r\n" +
+                "^FO50,420" + "\r\n" + "^A0,N,30,30" + "\r\n" + "^FDThanks for choosing us!^FS" + "\r\n" +
 
-        "^FO50,470" + "\r\n" + "^B3N,N,45,Y,N" + "\r\n" + "^FD0123456^FS" + "\r\n" + "^XZ", footerStartPosition, totalPrice);
+                "^FO50,470" + "\r\n" + "^B3N,N,45,Y,N" + "\r\n" + "^FD0123456^FS" + "\r\n" + "^XZ", footerStartPosition, totalPrice);
 
         long footerHeight = 600;
         long labelLength = headerHeight + totalBodyHeight + footerHeight;
@@ -320,27 +320,27 @@ public class ReceiptDemo extends ConnectionScreen {
          ^XZ indicates the end of a label
          */
 
-        "^XA" +
+                "^XA" +
 
-        "^POI^PW400^MNN^LL325^LH0,0" + "\r\n" +
+                        "^POI^PW400^MNN^LL325^LH0,0" + "\r\n" +
 
-        "^FO50,50" + "\r\n" + "^A0,N,70,70" + "\r\n" + "^FD Shipping^FS" + "\r\n" +
+                        "^FO50,50" + "\r\n" + "^A0,N,70,70" + "\r\n" + "^FD Shipping^FS" + "\r\n" +
 
-        "^FO50,130" + "\r\n" + "^A0,N,35,35" + "\r\n" + "^FDPurchase Confirmation^FS" + "\r\n" +
+                        "^FO50,130" + "\r\n" + "^A0,N,35,35" + "\r\n" + "^FDPurchase Confirmation^FS" + "\r\n" +
 
-        "^FO50,180" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDCustomer:^FS" + "\r\n" +
+                        "^FO50,180" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDCustomer:^FS" + "\r\n" +
 
-        "^FO225,180" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDAcme Industries^FS" + "\r\n" +
+                        "^FO225,180" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDAcme Industries^FS" + "\r\n" +
 
-        "^FO50,220" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDDelivery Date:^FS" + "\r\n" +
+                        "^FO50,220" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDDelivery Date:^FS" + "\r\n" +
 
-        "^FO225,220" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FD%s^FS" + "\r\n" +
+                        "^FO225,220" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FD%s^FS" + "\r\n" +
 
-        "^FO50,273" + "\r\n" + "^A0,N,30,30" + "\r\n" + "^FDItem^FS" + "\r\n" +
+                        "^FO50,273" + "\r\n" + "^A0,N,30,30" + "\r\n" + "^FDItem^FS" + "\r\n" +
 
-        "^FO280,273" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDPrice^FS" + "\r\n" +
+                        "^FO280,273" + "\r\n" + "^A0,N,25,25" + "\r\n" + "^FDPrice^FS" + "\r\n" +
 
-        "^FO50,300" + "\r\n" + "^GB350,5,5,B,0^FS" + "^XZ";
+                        "^FO50,300" + "\r\n" + "^GB350,5,5,B,0^FS" + "^XZ";
 
         int headerHeight = 325;
 
@@ -376,21 +376,21 @@ public class ReceiptDemo extends ConnectionScreen {
 
         String footer = String.format("^XA^POI^LL600" + "\r\n" +
 
-        "^FO50,1" + "\r\n" + "^GB350,5,5,B,0^FS" + "\r\n" +
+                "^FO50,1" + "\r\n" + "^GB350,5,5,B,0^FS" + "\r\n" +
 
-        "^FO50,15" + "\r\n" + "^A0,N,40,40" + "\r\n" + "^FDTotal^FS" + "\r\n" +
+                "^FO50,15" + "\r\n" + "^A0,N,40,40" + "\r\n" + "^FDTotal^FS" + "\r\n" +
 
-        "^FO175,15" + "\r\n" + "^A0,N,40,40" + "\r\n" + "^FD$%.2f^FS" + "\r\n" +
+                "^FO175,15" + "\r\n" + "^A0,N,40,40" + "\r\n" + "^FD$%.2f^FS" + "\r\n" +
 
-        "^FO50,130" + "\r\n" + "^A0,N,45,45" + "\r\n" + "^FDPlease Sign Below^FS" + "\r\n" +
+                "^FO50,130" + "\r\n" + "^A0,N,45,45" + "\r\n" + "^FDPlease Sign Below^FS" + "\r\n" +
 
-        "^FO50,190" + "\r\n" + "^GB350,200,2,B^FS" + "\r\n" +
+                "^FO50,190" + "\r\n" + "^GB350,200,2,B^FS" + "\r\n" +
 
-        "^FO50,400" + "\r\n" + "^GB350,5,5,B,0^FS" + "\r\n" +
+                "^FO50,400" + "\r\n" + "^GB350,5,5,B,0^FS" + "\r\n" +
 
-        "^FO50,420" + "\r\n" + "^A0,N,30,30" + "\r\n" + "^FDThanks for choosing us!^FS" + "\r\n" +
+                "^FO50,420" + "\r\n" + "^A0,N,30,30" + "\r\n" + "^FDThanks for choosing us!^FS" + "\r\n" +
 
-        "^FO50,470" + "\r\n" + "^B3N,N,45,Y,N" + "\r\n" + "^FD0123456^FS" + "\r\n" + "^XZ", totalPrice);
+                "^FO50,470" + "\r\n" + "^B3N,N,45,Y,N" + "\r\n" + "^FD0123456^FS" + "\r\n" + "^XZ", totalPrice);
 
         printerConnection.write(footer.getBytes());
 

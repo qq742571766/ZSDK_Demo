@@ -1,14 +1,14 @@
 /***********************************************
  * CONFIDENTIAL AND PROPRIETARY 
- * 
+ *
  * The source code and other information contained herein is the confidential and the exclusive property of
  * ZIH Corp. and is subject to the terms and conditions in your end user license agreement.
  * This source code, and any other information contained herein, shall not be copied, reproduced, published, 
  * displayed or distributed, in whole or in part, in any medium, by any means, for any purpose except as
  * expressly permitted under such license agreement.
- * 
+ *
  * Copyright ZIH Corp. 2012
- * 
+ *
  * ALL RIGHTS RESERVED
  ***********************************************/
 
@@ -226,7 +226,7 @@ public class PrinterStatusScreen extends Activity {
         String readyString = "Printer " + (ready ? "ready" : "not ready");
         String labelsInBatch = "Labels in batch: " + String.valueOf(printerStatus.labelsRemainingInBatch);
         String labelsInRecvBuffer = "Labels in buffer: " + String.valueOf(printerStatus.numberOfFormatsInReceiveBuffer);
-        return new String[] { readyString, labelsInBatch, labelsInRecvBuffer };
+        return new String[]{readyString, labelsInBatch, labelsInRecvBuffer};
     }
 
     private void saveSettings() {

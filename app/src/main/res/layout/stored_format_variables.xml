@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent"
-	android:layout_height="wrap_content">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
 
-	<LinearLayout
-		android:orientation="vertical"
-		android:layout_width="fill_parent"
-		android:gravity="center_horizontal"
-		android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-		<TextView
-			android:id="@+id/formatName"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="" />
+        <TextView
+            android:id="@+id/formatName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
 
-		<TableLayout
-			android:id="@+id/variablesTable"
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:stretchColumns="0,1" />
+        <TableLayout
+            android:id="@+id/variablesTable"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1" />
 
-		<Button
-			android:id="@+id/printFormatButton"
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:text="Print" />
+        <Button
+            android:id="@+id/printFormatButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Print" />
 
-	</LinearLayout>
+    </LinearLayout>
 </ScrollView>
